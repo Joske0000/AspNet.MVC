@@ -1,0 +1,25 @@
+@model List<AspNet.MVC.Models.Book>
+
+<h2>List of Books</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Year Published</th>
+        <th>Author</th>
+        <th>Nationality</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td>@book.Title</td>
+            <td>@book.YearPublished</td>
+            <td>@book.Author.Name</td>
+            <td>@book.Author.Nationality</td>
+        </tr>
+    }
+    </tbody>
+</table>
